@@ -287,20 +287,25 @@ export default function FruitGuessingGame() {
               
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">
-                  {gameStatus === 'won' ? 'You Win!' : 'System Wins!'}
+                  {gameStatus === 'won' ? 'You Win! 🎉' : 'You Lost! 😢'}
                 </h2>
                 <p className="text-xl text-muted-foreground">
                   The fruit was: <span className="font-bold text-foreground">{secretFruit}</span>
                 </p>
+                {gameStatus === 'lost' && (
+                  <p className="text-lg text-destructive font-semibold">
+                    Game Over - No attempts left!
+                  </p>
+                )}
               </div>
 
               <Button
                 size="lg"
                 onClick={playAgain}
-                className="rounded-full px-8 bg-gradient-primary"
+                className="rounded-full px-12 py-6 text-lg bg-gradient-primary hover:shadow-glow"
               >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Play Again
+                <RefreshCw className="w-6 h-6 mr-2" />
+                Restart Game
               </Button>
             </div>
           )}
