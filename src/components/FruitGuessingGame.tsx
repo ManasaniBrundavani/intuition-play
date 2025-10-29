@@ -299,6 +299,26 @@ export default function FruitGuessingGame() {
           )}
         </Card>
 
+        {/* Available Fruits */}
+        <Card className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-primary" />
+              Available Fruits
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
+              {fruits.map((fruit) => (
+                <div
+                  key={fruit}
+                  className="px-3 py-2 bg-card rounded-lg text-center text-sm font-medium border border-border hover:border-primary hover:shadow-soft transition-all"
+                >
+                  {fruit}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Card>
+
         {/* Instructions */}
         <Card className="p-6 bg-muted/50">
           <div className="space-y-3">
@@ -307,7 +327,7 @@ export default function FruitGuessingGame() {
               How to Play
             </h3>
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li>• The computer picks a fruit secretly</li>
+              <li>• The computer picks a fruit secretly from the list above</li>
               <li>• You have {maxAttempts} attempts to guess correctly</li>
               <li>• Click "Speak Your Guess" and say the fruit name</li>
               <li>• The system will respond with voice feedback</li>
