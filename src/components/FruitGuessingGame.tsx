@@ -8,7 +8,14 @@ import confetti from 'canvas-confetti';
 const fruits = [
   'apple', 'banana', 'orange', 'grape', 'mango', 
   'strawberry', 'watermelon', 'pineapple', 'cherry', 'peach',
-  'kiwi', 'papaya', 'blueberry', 'coconut', 'lemon'
+  'kiwi', 'papaya', 'blueberry', 'coconut', 'lemon',
+  'lime', 'avocado', 'pomegranate', 'guava', 'dragon fruit',
+  'passion fruit', 'lychee', 'plum', 'apricot', 'fig',
+  'melon', 'cantaloupe', 'honeydew', 'tangerine', 'grapefruit',
+  'blackberry', 'raspberry', 'cranberry', 'gooseberry', 'mulberry',
+  'persimmon', 'dates', 'jackfruit', 'durian', 'rambutan',
+  'starfruit', 'mangosteen', 'longan', 'kumquat', 'nectarine',
+  'pear', 'quince', 'elderberry', 'boysenberry', 'acai'
 ];
 
 export default function FruitGuessingGame() {
